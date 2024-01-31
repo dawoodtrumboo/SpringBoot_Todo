@@ -6,22 +6,26 @@ This repository contains a Vite app connected to a Spring Boot backend. It demon
 
 Before running the application, ensure you have the following installed:
 
-- Node.js (v14 or higher)
-- npm (v7 or higher)
-- Java Development Kit (JDK) (v11 or higher)
-- PostgreSQL (optional, for Spring Boot backend)
+- Node.js (v20 or higher)
+- npm (v10 or higher)
+- Java Development Kit (JDK) (v21 or higher)
+- PostgreSQL 
 
 ## Getting Started
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/dawoodtrumboo/SpringBoot_Todo.git
 cd your-repo
-2. Set Up Spring Boot Backend
-Navigate to the spring-boot-backend directory.
+```
 
-cd spring-boot-backend
+
+### 2. Set Up Spring Boot Backend
+```bash
+Navigate to the backend directory.
+
+cd server
 
 Update the PostgreSQL database configuration in src/main/resources/application.properties.
 
@@ -31,23 +35,22 @@ spring.datasource.password=yourpassword
 
 Run the Spring Boot application.
 
-./mvnw spring-boot:run
+./mvnw spring-boot:run or java -jar target/todo-crud.jar
+```
 
-3. Set Up Vite Frontend
+### 3. Set Up Vite Frontend
+```bash
 Open a new terminal and navigate to the root directory.
 
-cd your-repo
+cd client
 
 Install dependencies.
 
 npm install
 
-Update the API base URL in src/services/api.js to match your Spring Boot backend URL.
+Update the API base URL in .env to match your Spring Boot backend URL.
 
-JavaScript
-
-const BASE_URL = 'http://localhost:8080'; // Replace with your Spring Boot backend URL
-AI-generated code. Review and use carefully. More info on FAQ.
 Run the Vite app.
 
 npm run dev
+```
