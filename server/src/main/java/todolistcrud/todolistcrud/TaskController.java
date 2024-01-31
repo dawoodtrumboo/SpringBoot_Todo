@@ -9,6 +9,7 @@
 
     @RestController
     @RequestMapping("/todos")  // Corrected endpoint path
+    @CrossOrigin(origins = "http://localhost:5174")
     public class TaskController {
 
         @Autowired
